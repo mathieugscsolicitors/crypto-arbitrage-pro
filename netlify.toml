@@ -1,0 +1,39 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  VITE_SUPABASE_URL = "https://pvcgiauelwnsucvsxggp.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB2Y2dpYXVlbHduc3VjdnN4Z2dwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc0Mzk4OTMsImV4cCI6MjA3MzAxNTg5M30.om2P0DdcoEOC6O8NwvN9F7od894h2kPWdHWURoT5AXo"
+  VITE_COINMARKETCAP_API_KEY = "4495172e-29f3-490f-803e-35beb4ae88e3"
+  VITE_APP_ENV = "production"
+  NPM_FLAGS = "--prefix=/dev/null"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

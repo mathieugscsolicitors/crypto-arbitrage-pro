@@ -1,0 +1,28 @@
+{
+  "deployment": {
+    "status": "completed",
+    "supabase": {
+      "url": "https://yddcqyufmmgsfkpsrlab.supabase.co",
+      "status": "operational",
+      "features": [
+        "Admin login functional",
+        "Client registration/login functional",
+        "Auto wallet creation (BTC, ETH, USDT, USDC)",
+        "Investment plans configured",
+        "RLS policies active",
+        "Email confirmation disabled for auto-login"
+      ]
+    },
+    "netlify": {
+      "site_id": "6130a200-8c1e-4d96-8d51-24db1d9c0172",
+      "url": "http://crypto-arbitrage-pro-1757940308177.netlify.app",
+      "status": "needs_manual_deploy",
+      "issue": "404 error - requires manual trigger deploy"
+    },
+    "admin_credentials": {
+      "email": "admin@crypto-arbitrage.com",
+      "password": "Admin123!"
+    },
+    "last_updated": "2025-09-15T15:09:30.068Z"
+  }
+}

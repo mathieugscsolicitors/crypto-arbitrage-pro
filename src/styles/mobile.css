@@ -1,0 +1,267 @@
+/* Optimisations CSS spécifiques mobile */
+
+/* Amélioration des interactions tactiles */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Optimisation des scrolls sur mobile */
+.mobile-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Prévention du zoom sur les inputs */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Amélioration des transitions pour mobile */
+.mobile-transition {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.mobile-transition:active {
+  transform: scale(0.98);
+}
+
+/* Optimisation des modales sur mobile */
+@media screen and (max-width: 768px) {
+  .modal-mobile {
+    margin: 0;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .modal-mobile .modal-content {
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+}
+
+/* Amélioration des cartes sur mobile */
+.mobile-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Optimisation des tableaux sur mobile */
+@media screen and (max-width: 768px) {
+  .mobile-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .mobile-table thead {
+    display: none;
+  }
+  
+  .mobile-table tbody,
+  .mobile-table tr,
+  .mobile-table td {
+    display: block;
+  }
+  
+  .mobile-table tr {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .mobile-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+  
+  .mobile-table td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+/* Optimisation des formulaires sur mobile */
+.mobile-form {
+  padding: 1rem;
+}
+
+.mobile-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-form input,
+.mobile-form textarea,
+.mobile-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.mobile-form button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Amélioration de la navigation mobile */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  padding: 0.5rem;
+  z-index: 50;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 0.75rem;
+  min-height: 44px;
+  justify-content: center;
+}
+
+.mobile-nav-item.active {
+  color: #3b82f6;
+}
+
+.mobile-nav-item svg {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0.25rem;
+}
+
+/* Optimisation des notifications sur mobile */
+@media screen and (max-width: 768px) {
+  .notification-mobile {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 100;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Amélioration des graphiques sur mobile */
+@media screen and (max-width: 768px) {
+  .chart-mobile {
+    height: 200px !important;
+    width: 100% !important;
+  }
+  
+  .chart-mobile .recharts-wrapper {
+    font-size: 12px;
+  }
+}
+
+/* Optimisation des boutons flottants */
+.fab-mobile {
+  position: fixed;
+  bottom: 80px;
+  right: 1rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab-mobile:active {
+  transform: scale(0.95);
+}
+
+/* Amélioration du focus pour l'accessibilité */
+@media screen and (max-width: 768px) {
+  *:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+}
+
+/* Optimisation des animations sur mobile */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Amélioration des espaces tactiles */
+.touch-area {
+  padding: 0.75rem;
+  margin: 0.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.touch-area:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Optimisation des listes sur mobile */
+.mobile-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-list-item {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+}
+
+.mobile-list-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-list-item:active {
+  background-color: #f8fafc;
+}

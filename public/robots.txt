@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://crypto-arbitrage-pro.vercel.app/sitemap.xml

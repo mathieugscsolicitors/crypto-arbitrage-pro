@@ -4,11 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\vite\\bin\\vite.js\"",
-    "build": "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\vite\\bin\\vite.js\" build",
+    "dev": "vite",
+    "build": "tsc && vite build",
     "lint": "eslint .",
-    "preview": "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\vite\\bin\\vite.js\" preview",
-    "netlify": "npm run build && netlify deploy --prod --dir=dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
